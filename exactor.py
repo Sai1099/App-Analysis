@@ -7,9 +7,9 @@ import time
 
 # Set up the WebDriver
 driver = webdriver.Chrome()
-
+app_id = "org.altruist.BajajExperia"
 # Navigate to the app page on Google Play Store
-app_url = "https://play.google.com/store/apps/details?id=org.altruist.BajajExperia"  # Replace with the actual app URL
+app_url = f'https://play.google.com/store/apps/details?id={app_id}'  # Replace with the actual app URL
 driver.get(app_url)
 
 try:
@@ -92,7 +92,7 @@ try:
               return f"Yes"
         fs = neat_founduseful(founduseful)
         wer = neat_answered(answered)
-        f.write(f"{realname}" + ',' + f"{aria_label}" + ',' + f"{review}" + ',' + f"{dated_review}" + ',' + f"{fs}" + ',' + f"{wer}\n")
+        f.write(f"{realname}" + ']' + f"{aria_label}" + ']' + f"{review}" + ']' + f"{dated_review}" + ']' + f"{fs}" + ']' + f"{wer}\n")
     
     print(count)
 
